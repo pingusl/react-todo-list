@@ -27,7 +27,12 @@ const Main = () => {
           Add Task
         </button>
       </section>
-      <section className="tasks-list"></section>
+      <section
+        className="tasks-list"
+        children={tasks.map((task, index) => {
+          return <p key={index}>{task}</p>;
+        })}
+      ></section>
     </>
   );
 };
